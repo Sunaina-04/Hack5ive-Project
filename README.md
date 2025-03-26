@@ -1,7 +1,12 @@
 # Check-in! 🤗
 <!-- ![Woman saying hi](https://img.freepik.com/premium-vector/friendly-woman-waving-yellow-blouse_948150-10224.jpg?w=826) -->
-<h2><img src="https://img.freepik.com/free-vector/welcome-concept-illustration_114360-27447.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Welcome" width="200" height="200"></h2>
-            <p> The "Check-in!" initiative endeavours to facilitate accessible and effective mental health management. The 
+
+<h2>
+<p align="center">
+  <img src="https://img.freepik.com/free-vector/welcome-concept-illustration_114360-27447.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Welcome" width="200" height="200"></h2>
+</p>
+            
+ <p> The "Check-in!" initiative endeavours to facilitate accessible and effective mental health management. The 
 project offers targeted interventions for prevalent emotional states, utilizing evidence-based Indian Vedic practices, 
 specifically yoga, meditation, and journaling. Scientific literature proves the effectiveness of these activities help  in mood 
 elevation and the promotion of sustained well-being. Recognizing the integral relationship between mental and physical 
@@ -23,12 +28,33 @@ We're dedicated to providing support and resources for your mental well-being. E
   <li>CSS</li>
   <li>Java Script</li>
 </ul>
-<h3> Website Preview </h3>
+<h3>🎯Future plans:</h3>
+<ul>
+  <li>Giving weekly report to the user.</li>
+            <li> Adding backend </li>
+  <li>Adding sad & irritated button</li>
+</ul>
+<h3>👁️ Website Preview </h3>
 
-
-
-<h3>
+<p align="center">
+            Home Page
+  <img src="https://github.com/user-attachments/assets/2bc233ad-ad1a-4a22-b8c8-14fe4f5787b7" alt="Home Page" >
+</p>
+ <p align="center">
+             Anxiety:
+  <img src="https://github.com/user-attachments/assets/44aa7cc9-92f3-486d-8ac3-63ea8b7449e6" alt="Anxiety" >
+</p><p align="center">
+            Gratitude:
+  <img src="https://github.com/user-attachments/assets/6f106a30-ed22-460c-987c-0fe7e4511ede" alt="Gratitude" >
+</p>
+</p><p align="center">
+            Tired:
+  <img src="https://github.com/user-attachments/assets/8f4199a2-e77b-43ff-9781-9f365e288c3d" alt="Tired" >
+</p>
+<p></p><h3>
 🌟Credits🌟</h3>
 Thanks to the following contributors:
-- [Sunaina Sharma](https://github.com/Sunaina-04)
-- [Shreya Sharma](https://github.com/shreya616sharma)
+<ul>
+<li> [Sunaina Sharma](https://github.com/Sunaina-04)</li>
+<li> [Shreya Sharma](https://github.com/shreya616sharma)</li>
+</ul></p>
