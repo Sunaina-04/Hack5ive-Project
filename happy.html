@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratitude Journal</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            /* Updated CSS to include background image */
+            font-family: 'Inter', sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/yellow-round-wallpaper-design_53876-119209.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bg-white {
+            background-color: rgba(255, 255, 255, 0.8); /* Add some transparency to the white elements */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6 rounded-lg">
+    <h1 class="text-3xl font-semibold text-rose-500 text-center mb-8 rounded-md shadow-md p-3 inline-block bg-white" style="background-color: rgba(255, 255, 224, 0.45);">My Gratitude Journal</h1>
+    <div class="entry-form bg-white rounded-lg shadow-md p-8 mb-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Add a New Entry</h2>
+        <form id="gratitudeForm" class="space-y-4">
+            <div>
+                <label for="date" class="block text-gray-700 text-sm font-bold mb-2">Date:</label>
+                <input type="date" id="date" name="date" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <div id="date-error" class="text-red-500 text-xs italic" style="display: none;"></div>
+            </div>
+            <div>
+                <label for="gratitude" class="block text-gray-700 text-sm font-bold mb-2">What are you grateful for today?</label>
+                <textarea id="gratitude" name="gratitude" rows="4" required placeholder="Enter your thoughts here..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                <div id="gratitude-error" class="text-red-500 text-xs italic" style="display: none;"></div>
+            </div>
+            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Add to Journal</button>
+        </form>
+    </div>
+    <div class="journal-entries bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">My Journal Entries</h2>
+        <ul id="journalEntries" class="space-y-3">
+            </ul>
+    </div>
+    <script>
+        const gratitudeForm = document.getElementById('gratitudeForm');
+        const journalEntries = document.getElementById('journalEntries');
+        const dateInput = document.getElementById('date');
+        const gratitudeInput = document.getElementById('gratitude');
+        const dateError = document.getElementById('date-error');
+        const gratitudeError = document.getElementById('gratitude-error');
+        let entries = [];
+        if (localStorage.getItem('gratitudeEntries')) {
+            entries = JSON.parse(localStorage.getItem('gratitudeEntries'));
+            displayEntries();
+        }
+        gratitudeForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+            if (!dateInput.value) {
+                dateError.textContent = "Please enter a date.";
+                dateError.style.display = "block";
+                isValid = false;
+            } else {
+                dateError.style.display = "none";
+            }
+            if (!gratitudeInput.value) {
+                gratitudeError.textContent = "Please enter what you are grateful for.";
+                gratitudeError.style.display = "block";
+                isValid = false;
+            } else {
+                gratitudeError.style.display = "none";
+            }
+            if (isValid) {
+                const newEntry = {
+                    date: dateInput.value,
+                    //  Change the format here
+                    gratitude: gratitudeInput.value
+                };
+                entries.push(newEntry);
+                localStorage.setItem('gratitudeEntries', JSON.stringify(entries));
+                displayEntries();
+                gratitudeForm.reset();
+            }
+        });
+        function displayEntries() {
+            journalEntries.innerHTML = '';
+            entries.forEach(entry => {
+                const listItem = document.createElement('li');
+                listItem.classList.add('bg-gray-50', 'border-l-4', 'border-green-500', 'p-4', 'rounded-md', 'shadow-sm');
+                // Change the format here
+                const formattedDate = entry.date.split('-').reverse().join('-');
+                listItem.innerHTML = `<p><span class="font-semibold text-gray-700">Date:</span> ${formattedDate}</p>
+                                      <p><span class="font-semibold text-gray-700">Gratitude:</span> ${entry.gratitude.replace(/\n/g, '<br>')}</p>`;
+                journalEntries.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Energized!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-gradient-energetic {
+            background-image: linear-gradient(to bottom right, #1B0266, #02BCB7);
+        }
+        .text-energetic {
+            color: #C8FCED;
+        }
+        .shadow-energetic {
+            box-shadow: 0 4px 12px rgba(28, 252, 237, 0.3);
+        }
+        .pulse-energetic {
+            animation: pulse 3s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+            100% { transform: scale(1); }
+        }
+        #video-container {
+            display: none; /* Initially hide the video container */
+        }
+    </style>
+</head>
+<body class="bg-gradient-energetic min-h-screen flex flex-col">
+    <header class="py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl sm:text-4xl font-semibold text-center text-energetic pulse-energetic shadow-energetic">Get Energized!</h1>
+    </header>
+
+    <main class="flex-1 flex items-center justify-center py-8 px-4 sm:px-6 lg:px-8">
+        <div id="initial-content" class="text-center">
+            <div class="flex justify-center mb-8">
+                <img src="https://img.freepik.com/premium-vector/yellow-lightning-bolt-with-white-background_263779-3042.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Energy Symbol" class="rounded-full shadow-md" style="width: 150px; height: 150px;">
+            </div>
+            <p class="text-lg sm:text-xl text-white mb-6">Ready to boost your mood and energy?</p>
+            <div class="inline-flex rounded-md shadow-md">
+                <button id="yes-button" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-500 hover:bg-cyan-600">
+                    Yes, I'm Ready!
+                    <svg class="-mr-1 ml-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="video-container" class="w-full">
+            <div class="container mx-auto">
+                <h2 class="text-2xl font-bold mb-8 text-center text-white">Here are some energizing videos!</h2>
+                <div id="video-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 px-4 sm:px-6 lg:px-8 text-center text-gray-200">
+        <p>© 2025 Energize Your Life. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const initialContent = document.getElementById('initial-content');
+        const videoContainer = document.getElementById('video-container');
+        const yesButton = document.getElementById('yes-button');
+        const videoCardsContainer = document.getElementById('video-cards');
+
+        const videoData = [
+            {
+                title: "Morning Energy Boost",
+                url: "https://www.youtube.com/watch?v=8tJmD7MUpYI&pp=ygUXbW9ybmluZyBlbmVyZ3kgZXhlcmNpc2U%3D"
+            },
+            {
+                title: "Quick Workout for Energy",
+                url: "https://www.youtube.com/watch?v=MU_3eoa1-X0&pp=ygUZcXVpY2sgd29ya291dCBmb3IgZW5lcmd5IA%3D%3D"
+            },
+            {
+                title: "Cardio",
+                url: "https://www.youtube.com/watch?v=kZDvg92tTMc&pp=ygUOY2FyZGlvIHdvcmtvdXQ%3D"
+            }
+        ];
+
+        function createVideoCard(video) {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-lg shadow-md overflow-hidden';
+
+            const link = document.createElement('a');
+            link.href = video.url;
+            link.target = '_blank';
+            link.className = 'block';
+
+            const content = document.createElement('div');
+            content.className = 'p-4';
+
+            const title = document.createElement('h2');
+            title.className = 'text-lg font-semibold mb-2';
+            title.textContent = video.title;
+
+            const description = document.createElement('p');
+            description.className = 'text-gray-600';
+            description.textContent = "Click to watch on YouTube";
+
+            content.appendChild(title);
+            content.appendChild(description);
+
+            link.appendChild(content);
+            card.appendChild(link);
+
+            return card;
+        }
+
+        yesButton.addEventListener('click', () => {
+            initialContent.style.display = 'none';
+            videoContainer.style.display = 'block';
+
+            videoCardsContainer.innerHTML = ''; // Clear any existing content
+            videoData.forEach(video => {
+                const card = createVideoCard(video);
+                videoCardsContainer.appendChild(card);
+            });
+        });
+    </script>
+</body>
+</html>

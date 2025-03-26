@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in!</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF; /* Changed to white */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF; /* Changed to white */
+            text-align: center; /* Center the content horizontally */
+        }
+
+        header {
+            background-color: #FFF; /* Changed to white */
+            color: black;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Changed to space-between */
+        }
+
+        header h1 {
+            margin: 0 auto; 
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        header  img {
+            max-height: 100px;
+            max-width: 160px;
+        }
+
+        footer {
+            background-color: #FFF; /* Changed to white */
+            color: black;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px -10px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .column {
+                flex: 1 0 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+                width: 100%;
+            }
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the buttons horizontally */
+            margin-bottom: 20px; /* Add some space below the buttons */
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            margin: 10px; /* Increased margin for spacing */
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px; 
+            background-color: #f0f0f0;
+            cursor: pointer;
+            font-size: 1.4em;  /* Increased font size */
+            flex: 0 0 30%; 
+            display: flex; /* Use flexbox for icon alignment */
+            align-items: center;
+            justify-content: flex-start; 
+            gap: 10px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added box shadow */
+             transition: background-color 0.3s ease; /* Smooth transition */
+            overflow: hidden;
+        }
+      .button-container button:hover{
+        background-color: #e0e0e0;
+      }
+      .greeting{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        color: #333;
+        display: flex; /* Use flexbox for image alignment */
+        align-items: center; /* Vertically center image and text */
+        justify-content: center;  /* Center the whole content */
+      }
+      .greeting img{
+        margin-left: 10px; 
+        height: 100px; 
+        border-radius: 50%; /* Make the image circular */
+        overflow: hidden;
+      }
+      .button-container button img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+    .button-container button:nth-child(1) {
+        outline: 2px solid orange;
+        background-color: rgba(255, 165, 0, 0.45); 
+    }
+    .button-container button:nth-child(3) {
+        outline: 2px solid red;
+        background-color: rgba(220, 20, 60, 0.45);
+    }
+    .button-container button:nth-child(2) {
+        outline: 2px solid #0E50A7;
+        background-color: #689BD4;
+    }
+    .button-container button:nth-child(4) {
+        background-color: rgba(169, 234, 17, 0.45);
+        outline: 2px solid #8eb629;
+    }
+    .button-container button:nth-child(5) {
+        background-color: rgba(221, 160, 221, 0.45);
+        outline: 2px solid purple;
+    }
+    .button-container button:nth-child(6) {
+    background-color: rgba(156, 100, 10, 0.45);
+    outline: 2px solid rgb(86, 39, 9);
+    }
+    .button-container button:nth-child(7) {
+    outline: 2px solid rgb(61, 60, 59);
+    }
+    .button-container button:nth-child(8) {
+        background-color: rgba(239, 187, 17, 0.45);
+        outline: 2px solid rgb(254, 204, 0);
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        
+        <img src="Screenshot 2025-03-25 130304.png" alt="mental health professional taking care of patient">
+        <h1>Check-in!</h1>
+    </header>
+    <h2 class = "greeting">Hi, How are you feeling today? <img src="undraw_love-it_8pc0.png" alt="Feeling" ></h2>
+    <div class="button-container">
+        <button onclick="window.location.href='anxiety.html'">
+            <img src="6f64bf01-0d3f-493f-83d1-69c353fb1838.svg" alt="Anxiety">
+            Anxiety
+        </button>
+        <button onclick="window.location.href='dummy_page2.html'">
+            <img src="https://img.freepik.com/premium-vector/sad-boy-sitting-alone_38747-644.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Button 2">
+            Sad
+        </button>
+        <button onclick="window.location.href='happy.html'">
+            <img src="https://img.freepik.com/premium-vector/happy-girl-is-jumping-white-backgroundfreedom-inspiration-creative-energy-concept_348404-1363.jpg?ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Button 3">
+            Happy
+        </button>
+        <button onclick="window.location.href='dummy_page4.html'">
+            <img src="https://img.freepik.com/free-vector/angry-woman-concept-illustration_114360-17662.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Button 4">
+            Irritated
+        </button>
+        <button onclick="window.location.href='self-critical.html'">
+            <img src="https://img.freepik.com/premium-vector/low-self-esteem-loathing-anger-concept-male-character-need-psychological-help-mind-health-problem-angry-unhappy-man-waving-fists-frightened-reflection-mirror-cartoon-vector-illustration_87771-11149.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Button 5">
+            Self critical
+        </button>
+        <button onclick="window.location.href='dummy_page6.html'">
+            <img src="https://img.freepik.com/free-vector/tired-man-concept-illustration_114360-14777.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Button 6">
+            Tired
+        </button>
+        <button onclick="window.location.href='dummy_page7.html'">
+            <img src="https://img.freepik.com/free-vector/overthinking-concept-illustration_114360-15146.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Button 7">
+            Obsessive thoughts
+        </button>
+        <button onclick="window.location.href='energetic.html'">
+            <img src="https://img.freepik.com/free-vector/self-confidenceconcept-illustration_114360-6475.jpg?uid=R189006321&ga=GA1.1.827632982.1730999360&semt=ais_hybrid" alt="Button 8">
+            Energetic
+        </button>
+        <button onclick="window.location.href='dummy_page9.html'">
+            <img src="https://placehold.co/20x20/EEE/31343C?text=9&font=Montserrat" alt="Button 9">
+            Button 9
+        </button>
+    </div>
+
+    <div class="container">
+        I completely understand that right now things are out of control, but talking about it might help. Reach out on 9152987821.(suicide prevention helpline)
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+</body>
+</html>
+<!-- give school bus outline and FFCE5C to the button 6 with opacity 45 -->
