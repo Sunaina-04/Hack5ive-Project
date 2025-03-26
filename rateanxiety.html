@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety Level Assessment</title>
+    <link rel="stylesheet" href="rateanxiety.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Anxiety Level Assessment</h1>
+        <p>Please rate your current anxiety level:</p>
+        <div class="rating-container">
+            <button class="rating-button" data-level="1" data-duration="30">1</button>
+            <button class="rating-button" data-level="2" data-duration="45">2</button>
+            <button class="rating-button" data-level="3" data-duration="60">3</button>
+            <button class="rating-button" data-level="4" data-duration="90">4</button>
+            <button class="rating-button" data-level="5" data-duration="120">5</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.rating-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                const duration = this.getAttribute('data-duration');
+                window.location.href = `index.html?level=${level}&duration=${duration}`;
+            });
+        });
+    </script>
+</body>
+</html>

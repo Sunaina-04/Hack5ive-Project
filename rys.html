@@ -1,0 +1,223 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refresh your senses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #E5EAD7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(240, 160, 75, 0.2);
+        }
+
+        h1 {
+            color: #926247;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Refresh your senses</h1>
+        <p>Engage your senses to feel more alert and present.</p>
+        <!-- Add more content here -->
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Yoga Poses</title>
+            <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: Arial, sans-serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background-color: #f3f3f3;
+                }
+        
+                .background-image {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    background-image: url('backyoga.jpeg');
+                    background-size: cover;
+                    background-position: center;
+                    opacity: 0.3; /* Make the image lighter */
+                }
+        
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    position: relative;
+                    z-index: 1;
+                }
+        
+                .card {
+                    background-color: rgba(170, 190, 120, 0.8); /* Light olive green color */
+                    border-radius: 10px;
+                    box-shadow: 0 2px 5px rgba(140, 160, 90, 0.2);
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                    text-align: center;
+                    padding: 20px;
+                    cursor: pointer;
+                }
+        
+                .card img {
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 10px;
+                }
+        
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 2;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0,0,0,0.4);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+        
+                .modal-content {
+                    background-color: #fefefe;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%;
+                    max-width: 600px;
+                    text-align: center;
+                    position: relative;
+                }
+        
+                .close {
+                    color: #aaa;
+                    position: absolute;
+                    top: 10px;
+                    right: 20px;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+        
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+        
+                h1 {
+                    color: #926247;
+                    text-align: center;
+                }
+        
+                p {
+                    color: #666;
+                    font-size: 1rem;
+                    line-height: 1.6;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="background-image"></div>
+        
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Refresh your senses</h1>
+                    <p>Engage your senses to feel more alert and present.</p>
+                </div>
+            </div>
+        
+            <div class="content-container">
+                <div class="cards-container">
+                    <div class="card" onclick="startTimer('Childpose.png', 3)">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2647/2647524.png" alt="Child's Pose Icon">
+                        <h3>Child's Pose</h3>
+                        <p>A gentle resting pose that helps calm the mind and release tension in the back.</p>
+                        <span class="duration">2-3 minutes</span>
+                    </div>
+        
+                    <div class="card" onclick="startTimer('catcow.png', 2)">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2647/2647513.png" alt="Cat-Cow Stretch Icon">
+                        <h3>Cat-Cow Stretch</h3>
+                        <p>A flowing movement that helps improve spine flexibility and reduce stress.</p>
+                        <span class="duration">1-2 minutes</span>
+                    </div>
+        
+                    <div class="card" onclick="startTimer('forwardfold.png', 3)">
+                        <img src="https://cdn-icons-png.flaticon.com/128/8105/8105724.png" alt="Forward Fold Icon">
+                        <h3>Forward Fold</h3>
+                        <p>Releases tension in the spine and hamstrings while calming the nervous system.</p>
+                        <span class="duration">2-3 minutes</span>
+                    </div>
+        
+                    <div class="card" onclick="startTimer('Shavasan.png', 10)">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2647/2647530.png" alt="Legs Up the Wall Icon">
+                        <h3>Chorpse</h3>
+                        <p>A restorative pose that helps reduce anxiety and relaxes the body.</p>
+                        <span class="duration">5-10 minutes</span>
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                var modal = document.getElementById("myModal");
+                var span = document.getElementsByClassName("close")[0];
+        
+                window.onload = function() {
+                    modal.style.display = "flex";
+                }
+        
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+        
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+        
+                function startTimer(image, duration) {
+                    window.location.href = `yogatimer.html?image=${image}&duration=${duration}`;
+                }
+            </script>
+        </body>
+        </html>

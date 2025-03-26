@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    background-color: #F7F4F2;
+    color: #4F3422;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    background-image: url('anxiety.jpeg'); /* Blank white image */
+    background-size: cover;
+    background-blend-mode: normal; /*remove luminosity*/
+}
+
+.container {
+    background-color: rgba(203, 216, 28, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4F3422;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rating-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #4F3422;
+    color: #F7F4F2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.rating-button:hover {
+    opacity: 1;
+}

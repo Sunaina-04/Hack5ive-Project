@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Session</title>
+    <style>
+        body {
+            background-color: #EEF1DA;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .timer {
+            font-size: 3rem;
+            color: #ADB2D4;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer" id="timer">00:00</div>
+    <div class="message">Enjoy your meditation session.</div>
+
+    <audio id="meditation-music" loop>
+        <source src="/path/to/your/audio/peaceful_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Get the duration from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const duration = parseInt(urlParams.get('duration')) * 60;
+        const music = document.getElementById('meditation-music');
+        music.play();
+
+        let timer = duration, minutes, seconds;
+        const interval = setInterval(() => {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            document.getElementById('timer').textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(interval);
+                music.pause();
+                music.currentTime = 0;
+                document.getElementById('timer').textContent = "00:00";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

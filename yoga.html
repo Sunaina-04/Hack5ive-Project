@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga</title>
+    <link rel="stylesheet" href="yoga.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Yoga Poses for Anxiety Relief</h1>
+    </div>
+
+    <div class="poses-container">
+        <div class="pose-tile" data-pose="Warrior I">
+            <img src="poses/warrior.jpg" alt="Warrior I Pose" class="pose-image">
+            <div class="pose-info">
+                <h3 class="pose-name">Warrior I</h3>
+                <p class="pose-description">A standing pose that builds strength and confidence.</p>
+                <span class="difficulty">Beginner</span>
+                <span class="duration">2 min</span>
+            </div>
+        </div>
+
+        <div class="pose-tile" data-pose="Tree">
+            <img src="poses/tree.jpg" alt="Tree Pose" class="pose-image">
+            <div class="pose-info">
+                <h3 class="pose-name">Tree Pose</h3>
+                <p class="pose-description">Improves balance and concentration while calming the mind.</p>
+                <span class="difficulty">Intermediate</span>
+                <span class="duration">1 min</span>
+            </div>
+        </div>
+
+        <div class="pose-tile" data-pose="Downward Dog">
+            <img src="poses/downward-dog.jpg" alt="Downward Dog Pose" class="pose-image">
+            <div class="pose-info">
+                <h3 class="pose-name">Downward Dog</h3>
+                <p class="pose-description">Stretches and strengthens the whole body while calming the nervous system.</p>
+                <span class="difficulty">Beginner</span>
+                <span class="duration">2 min</span>
+            </div>
+        </div>
+
+        <div class="pose-tile" data-pose="Child's Pose">
+            <img src="poses/child.jpg" alt="Child's Pose" class="pose-image">
+            <div class="pose-info">
+                <h3 class="pose-name">Child's Pose</h3>
+                <p class="pose-description">A restful pose that calms the mind and relieves stress.</p>
+                <span class="difficulty">Beginner</span>
+                <span class="duration">3 min</span>
+            </div>
+        </div>
+
+        <div class="pose-tile" data-pose="Corpse">
+            <img src="poses/" alt="Corpse Pose" class="pose-image">
+            <div class="pose-info">
+                <h3 class="pose-name">Corpse Pose</h3>
+                <p class="pose-description">Final relaxation pose for deep relaxation and stress relief.</p>
+                <span class="difficulty">Beginner</span>
+                <span class="duration">5 min</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.pose-tile').forEach(tile => {
+            tile.addEventListener('click', function() {
+                const pose = this.getAttribute('data-pose');
+                window.location.href = `index.html?pose=${pose}`;
+            });
+        });
+    </script>
+</body>
+</html>

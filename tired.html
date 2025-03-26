@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeling Tired</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #FFEDFA; /* Light Pink */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .card {
+            cursor: pointer;
+            background-color: #FFB8E0; /* Light Pink */
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 40px;
+            border: none;
+            width: 100%;
+        }
+
+        .card:nth-child(1) {
+            background-color: #FFB8E0; /* Light Pink */
+            border: 2px solid #EC7FA9; /* Pink */
+        }
+
+        .card:nth-child(2) {
+            background-color: #FFB8E0; /* Light Pink */
+            border: 2px solid #BE5985; /* Dark Pink */
+        }
+
+        .card:nth-child(1) h3 { color: #EC7FA9; } /* Pink */
+        .card:nth-child(2) h3 { color: #BE5985; } /* Dark Pink */
+        .card:nth-child(3) h3 { color: #EC7FA9; } /* Pink */
+        .card:nth-child(4) h3 { color: #BE5985; } /* Dark Pink */
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="cards-container">
+        <button class="card" onclick="window.location.href='mne.html'">
+            <h3>Move and Energise</h3>
+            <p>Get active with simple exercises to boost your energy levels.</p>
+        </button>
+
+        <button class="card" onclick="window.location.href='rys.html'">
+            <h3>Refresh your senses</h3>
+            <p>Engage your senses to feel more alert and present.</p>
+        </button>
+
+        <button class="card" onclick="window.location.href='mm.html'">
+            <h3>Mindful Movements</h3>
+            <p>Practice gentle movements to increase energy and focus.</p>
+        </button>
+
+        <button class="card" onclick="window.location.href='hnn.html'">
+            <h3>Hydrate and Nourish</h3>
+            <p>Learn about healthy eating and hydration habits.</p>
+        </button>
+    </div>
+</body>
+</html>

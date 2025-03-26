@@ -1,0 +1,44 @@
+  body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #F7F4F2;
+  font-family: sans-serif;
+  font-family: 'Arial', sans-serif;
+}
+
+.circle-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #926247;
+  opacity: 0.5;
+  transition: transform 4s ease-in-out, background-color 4s ease-in-out, box-shadow 4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.inhale {
+  transform: scale(2);
+  background-color: #926247;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.exhale {
+  transform: scale(1);
+  background-color: #926247;
+  box-shadow: none;
+}

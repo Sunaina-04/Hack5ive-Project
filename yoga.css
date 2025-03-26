@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #F7F4F2;
+    font-family: 'Merriweather', serif;
+}
+
+.poses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pose-tile {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(146, 98, 71, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.pose-tile:hover {
+    transform: translateY(-5px);
+}
+
+.pose-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #C28B6A;
+}
+
+.pose-info {
+    padding: 15px;
+}
+
+.pose-name {
+    color: #926247;
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.pose-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.difficulty {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #C28B6A;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.duration {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #926247;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .poses-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .pose-image {
+        height: 150px;
+    }
+
+    .pose-name {
+        font-size: 1rem;
+    }
+}

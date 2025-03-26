@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Movements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #E5EAD7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(240, 160, 75, 0.2);
+        }
+
+        h1 {
+            color: #926247;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Mindful Movements</h1>
+        <p>Practice gentle movements to increase energy and focus.</p>
+        <!-- Add more content here -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Meditation Practices</title>
+            <style>
+                body {
+                    background-color: #EEF1DA;
+                    font-family: Arial, sans-serif;
+                }
+        
+                .cards-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    justify-content: center;
+                    padding: 20px;
+                }
+        
+                .card {
+                    background-color: #D5E5D5;
+                    border: 2px solid #C7D9DD;
+                    border-radius: 8px;
+                    padding: 20px;
+                    width: 300px;
+                    box-shadow: 0 5px 15px rgba(173, 178, 212, 0.4);
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    cursor: pointer;
+                }
+        
+                .card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 20px rgba(173, 178, 212, 0.6);
+                }
+        
+                .card h3 {
+                    color: #ADB2D4;
+                    font-size: 1.2rem;
+                    margin: 15px 0;
+                }
+        
+                .card p {
+                    color: #666;
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                }
+        
+                .duration {
+                    display: inline-block;
+                    padding: 4px 8px;
+                    background-color: #ADB2D4;
+                    color: white;
+                    border-radius: 4px;
+                    font-size: 0.8rem;
+                    margin-top: 10px;
+                }
+        
+                .card img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+                    margin-bottom: 10px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="cards-container">
+                <div class="card" data-duration="5" data-url="submm.html">
+                    <img src="breathawareness.png" alt="Breath Awareness">
+                    <h3>Breath Awareness</h3>
+                    <p>Focus on your breath to anchor yourself in the present moment and calm your mind.</p>
+                    <span class="duration">5 minutes</span>
+                </div>
+        
+                <div class="card" data-duration="7" data-url="submm.html">
+                    <img src="Lovingkindness.png" alt="Loving-Kindness">
+                    <h3>Loving-Kindness</h3>
+                    <p>Cultivate compassion and positive feelings towards yourself and others.</p>
+                    <span class="duration">7 minutes</span>
+                </div>
+        
+                <div class="card" data-duration="15" data-url="submm.html">
+                    <img src="Mindfulwalking.png" alt="Mindful Walking">
+                    <h3>Mindful Walking</h3>
+                    <p>Practice meditation in motion, bringing awareness to each step and movement.</p>
+                    <span class="duration">15 minutes</span>
+                </div>
+            </div>
+        
+            <audio id="meditation-music" loop>
+                <source src="/path/to/your/audio/peaceful_music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        
+            <script>
+                document.querySelectorAll('.card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        const url = card.getAttribute('data-url');
+                        window.location.href = `${url}?duration=${card.getAttribute('data-duration')}`;
+                    });
+                });
+            </script>
+        </body>
+        </html>

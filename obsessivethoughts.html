@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calming Music for Obsessive Thoughts</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #FCE7C8;
+        }
+
+        .music-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .music-card {
+            background-color: #FFE4E1;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(240, 160, 75, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+
+        .music-card:nth-child(1) { background-color: #FFE4E1; border: 2px solid #F0A04B; }
+        .music-card:nth-child(2) { background-color: #FADADD; border: 2px solid #B1C29E; }
+        .music-card:nth-child(3) { background-color: #FFE6E8; border: 2px solid #FADA7A; }
+        .music-card:nth-child(4) { background-color: #FFD1DC; border: 2px solid #F0A04B; }
+
+        .music-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(240, 160, 75, 0.4);
+        }
+
+        h2 {
+            color: #926247;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .duration {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #F0A04B;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="music-container">
+        <div class="music-card">
+            <h2>Ocean Waves</h2>
+            <p>Gentle ocean waves to help calm racing thoughts and promote relaxation.</p>
+            <audio controls>
+                <source src="audio/ocean-waves.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="duration">10 minutes</span>
+        </div>
+
+        <div class="music-card">
+            <h2>Rainforest Ambience</h2>
+            <p>Soothing rainforest sounds to ground yourself in the present moment.</p>
+            <audio controls>
+                <source src="audio/rainforest.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="duration">15 minutes</span>
+        </div>
+
+        <div class="music-card">
+            <h2>Meditation Bells</h2>
+            <p>Soft meditation bells to help break thought patterns and restore focus.</p>
+            <audio controls>
+                <source src="audio/meditation-bells.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="duration">8 minutes</span>
+        </div>
+
+        <div class="music-card">
+            <h2>White Noise</h2>
+            <p>Consistent white noise to help quiet intrusive thoughts and improve concentration.</p>
+            <audio controls>
+                <source src="audio/white-noise.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="duration">12 minutes</span>
+        </div>
+    </div>
+</body>
+</html>
