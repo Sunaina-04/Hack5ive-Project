@@ -27,5 +27,5 @@ We're dedicated to providing support and resources for your mental well-being. E
 ## Credits
 
 Thanks to the following contributors:
-- [Sunaina Sharma](https://github.com/Sunaina-04))
+- [Sunaina Sharma](https://github.com/Sunaina-04)
 - [Shreya Sharma](https://github.com/shreya616sharma)
